@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "cae23a45-f9c0-4fa0-a7b7-11d9106889a9",
+		"name": "FINAL PROJECT HACKTIVE8",
+		"description": "Final Project Hacktive8 - Ridho Mufti Asyari (Erajaya)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6670501"
+	},
+	"item": [
+		{
+			"name": "NOTES",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMzMzg4NDJ9.aP-3c25U1r7AxnBGKCSLPZXDtllMV4ILlVoKKd5FeGc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{production}}/notes",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMzMzg4NDJ9.aP-3c25U1r7AxnBGKCSLPZXDtllMV4ILlVoKKd5FeGc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{production}}/notes/5",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMyNDgzNDN9.GGAEgp-2MfZjpUCHZd83NSHGkpTg3KOXD7E-n-t-790",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"testRidhoLagi\",\r\n    \"detail\":\"testRidhoLagi\",\r\n    \"noteType\":\"PUBLIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{production}}/notes",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMyNDgzNDN9.GGAEgp-2MfZjpUCHZd83NSHGkpTg3KOXD7E-n-t-790",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"testRidho Update\",\r\n    \"detail\":\"testRidho Update Lagi\",\r\n    \"noteType\":\"PUBLIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{production}}/notes/5",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMyNDgzNDN9.GGAEgp-2MfZjpUCHZd83NSHGkpTg3KOXD7E-n-t-790",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{production}}/notes/4",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "GET ALL NOTES (JWT TOKEN REQUIRED):\n\nDalam API ini akan mengeluarkan data note dengan rule sebagai berikut :\n\n1. note yang mempunyai tipe PUBLIC\n2. note yang mempunyai tipe PRIVATE dan user tersebut adalah note owner\n3. note yang mempunyai tipe PRIVATE dan di grant untuk dilihat user\n    \n\nGET BY ID NOTES (JWT TOKEN REQUIRED):\n\nDalam API ini akan mengeuarkan note berdasarkan ID nya dengan rule sebagai berikut:\n\n1. note yang mempunyai tipe PUBLIC\n2. note yang mempunyai tipe PRIVATE dan user tersebut adalah note owner\n3. note yang mempunyai tipe PRIVATE dan di grant untuk dilihat user\n    \n\nCREATE NOTES (JWT TOKEN REQUIRED):\n\nDalam API ini user dapat membuat note\n\nUPDATE NOTES (JWT TOKEN REQUIRED):\n\nDalam API ini hanya note owner yang dapat merubah\n\n- jika perubahan noteType dari PRIVATE ke PUBLIC, maka semua access yang sudah di grant akan dihapus di Module Notes Responsibilities(Access)\n    \n\nDELETE NOTES (JWT TOKEN REQUIRED):\n\nDalam API ini hanya note owner yang dapat menghapus"
+		},
+		{
+			"name": "NOTES ACCESS",
+			"item": [
+				{
+					"name": "GET ACCESS BY NOTE ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMzMzg4NDJ9.aP-3c25U1r7AxnBGKCSLPZXDtllMV4ILlVoKKd5FeGc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{production}}/notes-access/5",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes-access",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GRANT ACCESS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMyNDgzNDN9.GGAEgp-2MfZjpUCHZd83NSHGkpTg3KOXD7E-n-t-790",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noteId\": 5,\r\n    \"userId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{production}}/notes-access",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes-access"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REVOKE ACCESS",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWRob0BnbWFpbC5jb20iLCJpYXQiOjE2NzMyNDgzNDN9.GGAEgp-2MfZjpUCHZd83NSHGkpTg3KOXD7E-n-t-790",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{production}}/notes-access/7/3",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"notes-access",
+								"7",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "GET ACCESS BY NOTE ID (JWT TOKEN REQUIRED):\n\nEndFragment\n\n:\n\nDalam API ini akan mengeluarkan user apa saja yang boleh mengakses note berdasarkan noteId. Dan API ini hanya boleh diakses oleh note Owner\n\nGRANT ACCESS (JWT TOKEN REQUIRED):\n\nDalam API ini note owner dapat memberikan akses untuk user lain\n\nREVOKE ACCESS (JWT TOKEN REQUIRED):\n\nDalam API ini note owner dapat menghilangkan akses untuk user yang telah di grant olehnya"
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"adam@gmail.com\",\r\n    \"password\":\"1234567890\",\r\n    \"username\":\"adam sugian\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{production}}/users/register",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"adam@gmail.com\",\r\n    \"password\":\"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{production}}/users/login",
+							"host": [
+								"{{production}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "REGISTER :\n\nAPI ini digunakan untuk mendaftarkan user\n\nLOGIN :\n\nAPI ini dipakai untuk user dapat login, API ini akan mengembalikan JWT TOKEN yang wajib dibawa oleh user tersebut untuk mengakses module NOTES dan NOTES ACCESS"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "devel",
+			"value": "http://localhost:3090",
+			"type": "string"
+		},
+		{
+			"key": "production",
+			"value": "https://simple-project-management-production.up.railway.app",
+			"type": "string"
+		}
+	]
+}
