@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "cae23a45-f9c0-4fa0-a7b7-11d9106889a9",
 		"name": "FINAL PROJECT HACKTIVE8",
-		"description": "Final Project Hacktive8 - Ridho Mufti Asyari (Erajaya)",
+		"description": "Final Project Hacktive8 - Ridho Mufti Asyari (Erajaya)\n\nEnd Point :\n\n1. devel : http://localhost:3090\n2. production : https://simple-project-management-production.up.railway.app",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "6670501"
 	},
